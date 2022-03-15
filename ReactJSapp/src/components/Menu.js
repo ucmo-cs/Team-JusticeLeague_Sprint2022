@@ -1,6 +1,5 @@
 import React from 'react';
-import { Nav, NavDropdown } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import {Nav, NavDropdown} from 'react-bootstrap';
 
 
 // This is the code that creates the navbar layout for MainPage.js

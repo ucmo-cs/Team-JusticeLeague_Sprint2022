@@ -1,6 +1,5 @@
 package com.example.demo.controller;
 
-import com.example.demo.Application;
 import com.example.demo.domain.Book;
 import com.example.demo.service.BookService;
 import lombok.RequiredArgsConstructor;

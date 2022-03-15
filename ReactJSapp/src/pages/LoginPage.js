@@ -1,6 +1,4 @@
 import React from 'react';
-import {Col, Container, Row} from "react-bootstrap";
-import styled from "styled-components";
 
 /*const LoginPageList = styled.div`
   margin: 20px 0px 0px 0px;
