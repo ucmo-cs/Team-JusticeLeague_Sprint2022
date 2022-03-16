@@ -1,4 +1,5 @@
 import React from 'react';
+import {Routes, Router} from 'react-router-dom';
 
 /*const LoginPageList = styled.div`
   margin: 20px 0px 0px 0px;
@@ -9,9 +10,11 @@ import React from 'react';
 
 const LoginPage = () => {
     return (
-        <div>
+        <div>           
             Login page
+            <p></p>         
         </div>
+    
         // old code building a login form page below
         /*<LoginPageList>
             Login page

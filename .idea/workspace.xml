@@ -4,31 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d7a31592-2cad-4a61-871a-037fa0651db1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java SpringBoot/src/main/java/com/example/demo/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java SpringBoot/src/main/java/com/example/demo/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java SpringBoot/src/main/java/com/example/demo/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java SpringBoot/src/main/java/com/example/demo/controller/BookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReactJS/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/ReactJSapp/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReactJS/app1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ReactJSapp/app1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReactJS/src/Add.js" beforeDir="false" afterPath="$PROJECT_DIR$/ReactJSapp/src/Add.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReactJS/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/ReactJSapp/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReactJS/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/ReactJSapp/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReactJS/src/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/ReactJSapp/src/App.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReactJS/src/Sub.js" beforeDir="false" afterPath="$PROJECT_DIR$/ReactJSapp/src/Sub.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReactJS/src/components/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/ReactJSapp/src/components/Footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReactJS/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/ReactJSapp/src/components/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReactJS/src/components/Menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/ReactJSapp/src/components/Menu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReactJS/src/components/SaveForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/ReactJSapp/src/components/SaveForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReactJS/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/ReactJSapp/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReactJS/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/ReactJSapp/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReactJS/src/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/ReactJSapp/src/logo.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReactJS/src/pages/CreatePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/ReactJSapp/src/pages/CreatePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReactJS/src/pages/ListPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/ReactJSapp/src/pages/ListPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReactJS/src/pages/LoginPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/ReactJSapp/src/pages/LoginPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReactJS/src/pages/MainPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/ReactJSapp/src/pages/MainPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReactJS/src/reportWebVitals.js" beforeDir="false" afterPath="$PROJECT_DIR$/ReactJSapp/src/reportWebVitals.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReactJS/src/setupTests.js" beforeDir="false" afterPath="$PROJECT_DIR$/ReactJSapp/src/setupTests.js" afterDir="false" />
-    </list>
+    <list default="true" id="d7a31592-2cad-4a61-871a-037fa0651db1" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -127,6 +103,7 @@
       <option name="presentableId" value="Default" />
       <updated>1647366278732</updated>
       <workItem from="1647366282254" duration="9614000" />
+      <workItem from="1647439714143" duration="401000" />
     </task>
     <servers />
   </component>

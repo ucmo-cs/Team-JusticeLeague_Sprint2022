@@ -15,22 +15,22 @@ const Menu = () => {
         <Nav variant="pills" activeKey="1" onSelect={handleSelect}>
             <Nav.Item>
                 <Nav.Link eventKey="1" href="#/home">
-                    About
+                    Home
                 </Nav.Link>
             </Nav.Item>
             <Nav.Item>
                 <Nav.Link eventKey="2" title="Item">
-                    Academics
+                    Login
                 </Nav.Link>
             </Nav.Item>
-            <Nav.Item>
+            {/* <Nav.Item>
                 <Nav.Link eventKey="3" disabled>
-                    NavLink 3 content
+                    Page Options
                 </Nav.Link>
-            </Nav.Item>
-            <NavDropdown title="Dropdown" id="nav-dropdown">
-                <NavDropdown.Item eventKey="4.1">Action</NavDropdown.Item>
-                <NavDropdown.Item eventKey="4.2">Another action</NavDropdown.Item>
+            </Nav.Item> */}
+            <NavDropdown title="Page Options" id="nav-dropdown">
+                <NavDropdown.Item eventKey="4.1">List Pages</NavDropdown.Item>
+                <NavDropdown.Item eventKey="4.2">Create Page</NavDropdown.Item>
                 <NavDropdown.Item eventKey="4.3">Something else here</NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item eventKey="4.4">Separated link</NavDropdown.Item>
