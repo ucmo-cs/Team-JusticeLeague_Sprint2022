@@ -12,6 +12,7 @@ const HeaderList = styled.div`
 const Header = () => {
     return (
         <HeaderList>
+            Header Nav Bar
             <Menu></Menu>
         </HeaderList>
     );

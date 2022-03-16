@@ -1,5 +1,6 @@
 import React from 'react';
-import {Routes, Router} from 'react-router-dom';
+import {Dialog, Header, Title, Body, Footer, Button, Modal} from 'react-bootstrap';
+import styled from 'styled-components';
 
 /*const LoginPageList = styled.div`
   margin: 20px 0px 0px 0px;
@@ -10,39 +11,9 @@ import {Routes, Router} from 'react-router-dom';
 
 const LoginPage = () => {
     return (
-        <div>           
-            Login page
-            <p></p>         
+        <div>
+            Login Page
         </div>
-    
-        // old code building a login form page below
-        /*<LoginPageList>
-            Login page
-            <Container>
-                <body>
-                <h2>Account Login</h2>
-                <Row>
-                    <Col sm={4}>blank place</Col>
-                    <Col sm={4}>
-                        <form>
-                            <label>
-                                Username or Email address
-                                <input type="text" name="username-field" />
-                            </label>
-                            <input type="submit" value="Submit" />
-                        </form>
-                    </Col>
-                    <Col sm={4}>blank place</Col>
-                </Row>
-                <Row>
-                    <Col sm>sm=true</Col>
-                    <Col sm>sm=true</Col>
-                    <Col sm>sm=true</Col>
-                    <Col sm={8}>sm=8</Col>
-                </Row>
-                </body>
-            </Container>
-        </LoginPageList>*/
     );
 };
 

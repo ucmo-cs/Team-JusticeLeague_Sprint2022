@@ -1,5 +1,7 @@
 import React from 'react';
 import {Nav, NavDropdown} from 'react-bootstrap';
+import {Link} from 'react-router-dom';
+import styled from 'styled-components';
 
 
 // This is the code that creates the navbar layout for MainPage.js
@@ -7,19 +9,18 @@ import {Nav, NavDropdown} from 'react-bootstrap';
 // because it has overlap
 const Menu = () => {
 
-    const handleSelect = (eventKey) => alert(`selected ${eventKey}`);
-    /// ^^^ can use this format, but use <Redirect> from react-router-dom
-    // plug in the file path name and force redirect.
+    const handleSelect = (eventKey) => `${eventKey}`; //alert(`selected ${eventKey}`);
+    // Create small script to handle what each event means.
 
     return (
-        <Nav variant="pills" activeKey="1" onSelect={handleSelect}>
+        <Nav componentClass={Link} variant="pills" activeKey="1" onSelect={handleSelect}>
             <Nav.Item>
-                <Nav.Link eventKey="1" href="#/home">
+                <Nav.Link eventKey="1" href="/home" to="/home">
                     Home
                 </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-                <Nav.Link eventKey="2" title="Item">
+                <Nav.Link eventKey="2" href="/LoginPage" to="/LoginPage">
                     Login
                 </Nav.Link>
             </Nav.Item>
