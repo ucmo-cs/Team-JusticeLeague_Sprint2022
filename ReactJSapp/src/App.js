@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import MainPage from './pages/MainPage';
 import LoginPage from './pages/LoginPage';
 import Header from './components/Header';
+import Body from './components/Body';
 import Footer from './components/Footer';
 import {Route, Routes} from 'react-router-dom';
 import CreatePage from './pages/CreatePage';
@@ -28,6 +29,7 @@ class App extends Component {
                     <Route path="/read" exact={true} element={<ListPage/>}/>
                 </Routes>
                 </Header>
+                <Body></Body>
                 <Footer></Footer>
             </div>
         );
