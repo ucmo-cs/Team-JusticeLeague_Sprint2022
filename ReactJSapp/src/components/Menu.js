@@ -1,5 +1,7 @@
 import React from 'react';
-import {Nav, NavDropdown} from 'react-bootstrap';
+
+import {Container, Nav, Navbar, NavDropdown} from 'react-bootstrap';
+
 import {Link} from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -11,7 +13,6 @@ const Menu = () => {
 
     const handleSelect = (eventKey) => `${eventKey}`; //alert(`selected ${eventKey}`);
     // Create small script to handle what each event means.
-
     return (
         <Nav componentClass={Link} variant="pills" activeKey="1" onSelect={handleSelect}>
             <Nav.Item>
@@ -36,8 +37,7 @@ const Menu = () => {
                 <NavDropdown.Divider />
                 <NavDropdown.Item eventKey="4.4">Separated link</NavDropdown.Item>
             </NavDropdown>
-        </Nav>
-
+        </Nav>               
     );
 };
 
