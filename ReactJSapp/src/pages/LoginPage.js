@@ -66,14 +66,14 @@ const LoginPage = () => {
                 <Nav fill variant="pills" activeKey="1">
                 <Row sm={2}>
 
-                        <Col sm={"2"}>
+                        <Col sm={"2"} lg={"6"}>
                         <Nav.Item>
-                            <Nav.Link eventKey="1" href="/createAccount">Create Account</Nav.Link>
+                            <Button size="sm" variant="link" type="submit">Create Account</Button>{' '}
                         </Nav.Item>
                         </Col>
-                        <Col sm={"2"}>
+                        <Col sm={"4"} lg={"6.5"}>
                         <Nav.Item>
-                            <Nav.Link eventKey="2" href="/forgotPass">Forgot your password?</Nav.Link>
+                            <Button size="sm" variant="link" type="submit">Forgot Password?</Button>{' '}
                         </Nav.Item>
                         </Col>
                 </Row>
@@ -89,7 +89,7 @@ const LoginPage = () => {
                 {/*</Form.Group>*/}
                 {/* row4 */}
                 <Row><Col>
-                <Button size="lg" variant="success" type="submit">Login</Button>{' '}
+                    <Button size="lg" variant="success" type="submit">Login</Button>{' '}
                     </Col>
                 </Row>
             </Form>

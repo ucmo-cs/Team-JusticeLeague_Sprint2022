@@ -21,7 +21,7 @@ const Menu = () => {
                 </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-                <Nav.Link eventKey="2" href="/LoginPage" to="/LoginPage">
+                <Nav.Link eventKey="2" href="/login" to="/login">
                     Login
                 </Nav.Link>
             </Nav.Item>
