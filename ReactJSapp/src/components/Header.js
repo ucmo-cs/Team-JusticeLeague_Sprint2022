@@ -3,15 +3,16 @@ import styled from 'styled-components';
 import Menu from './Menu';
 
 const HeaderList = styled.div`
-  font-size: 1.0em;
-  border : 1px solid black;
-  height : 100px;
+  padding: 0rem 1rem 2rem 1rem;
+  background-color: forestgreen;
+  left: 0;
+  width: 100%;
 `;
-
 
 const Header = () => {
     return (
         <HeaderList>
+            <b>Content in the Header Nav Bar</b>
             <Menu></Menu>
         </HeaderList>
     );

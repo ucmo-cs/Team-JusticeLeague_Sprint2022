@@ -3,15 +3,20 @@ import styled from 'styled-components';
 
 
 const FooterList = styled.div`
-  font-size: 1.0em;
-  border : 1px solid black;
-  height : 100px;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: forestgreen;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 `;
 
 const Footer = () => {
     return (
         <FooterList>
-            Footer
+            <b>Footer</b>
+            <p>This is some content in the footer</p>
         </FooterList>
     );
 };
