@@ -1,8 +1,10 @@
 import React from 'react';
+
 import {Button, Modal, Form, Container, Row, Col, Nav} from 'react-bootstrap';
 import styled from 'styled-components';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+
 
 // For good styling info visit: https://styled-components.com/docs/basics
 
@@ -94,6 +96,7 @@ const LoginPage = () => {
             </Container>
             </LoginList>
             <Footer></Footer>
+
         </div>
     );
 };

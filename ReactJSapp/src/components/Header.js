@@ -12,7 +12,6 @@ const HeaderList = styled.div`
 const Header = () => {
     return (
         <HeaderList>
-            <b>Content in the Header Nav Bar</b>
             <Menu></Menu>
         </HeaderList>
     );

@@ -1,5 +1,7 @@
 import React from 'react';
+
 import {Container, Nav, Navbar, NavDropdown} from 'react-bootstrap';
+
 import {Link} from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -11,27 +13,31 @@ const Menu = () => {
 
     const handleSelect = (eventKey) => `${eventKey}`; //alert(`selected ${eventKey}`);
     // Create small script to handle what each event means.
-
-    return (// add fixe="top" ... or side?
-        // <Navbar componentClass={Link} activeKey="1" onSelect={handleSelect} bg="dark" variant="dark">
-        <Navbar componentClass={Link} activeKey="1" onSelect={handleSelect} bg="dark" variant="dark" >
-            <Container>
-                <Navbar.Brand href="#home">Commerce Bank</Navbar.Brand>
-                    <Nav className="me-auto">
-                        <Nav.Link eventKey="1" href="/home" to="/home">Home</Nav.Link>
-                        <Nav.Link eventKey="2" href="/login" to="/login">
-                            Login
-                        </Nav.Link>
-                        <NavDropdown title="Page Options" id="nav-dropdown">
-                            <NavDropdown.Item eventKey="4.1" href="/list" to="/list">List Pages</NavDropdown.Item>
-                            <NavDropdown.Item eventKey="4.2" href="/create" to="/create">Create Page</NavDropdown.Item>
-                            <NavDropdown.Item eventKey="4.3">Something else here</NavDropdown.Item>
-                            <NavDropdown.Divider />
-                            <NavDropdown.Item eventKey="4.4">Separated link</NavDropdown.Item>
-                        </NavDropdown>
-                    </Nav>
-            </Container>
-        </Navbar>
+    return (
+        <Nav componentClass={Link} variant="pills" activeKey="1" onSelect={handleSelect}>
+            <Nav.Item>
+                <Nav.Link eventKey="1" href="/home" to="/home">
+                    Home
+                </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+                <Nav.Link eventKey="2" href="/LoginPage" to="/LoginPage">
+                    Login
+                </Nav.Link>
+            </Nav.Item>
+            {/* <Nav.Item>
+                <Nav.Link eventKey="3" disabled>
+                    Page Options
+                </Nav.Link>
+            </Nav.Item> */}
+            <NavDropdown title="Page Options" id="nav-dropdown">
+                <NavDropdown.Item eventKey="4.1">List Pages</NavDropdown.Item>
+                <NavDropdown.Item eventKey="4.2">Create Page</NavDropdown.Item>
+                <NavDropdown.Item eventKey="4.3">Something else here</NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item eventKey="4.4">Separated link</NavDropdown.Item>
+            </NavDropdown>
+        </Nav>               
     );
 };
 
