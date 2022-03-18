@@ -12,15 +12,16 @@ import Footer from '../components/Footer';
 const LoginList = styled.div`  
   background-color: lightgreen;
   margin-top: 5%; margin-bottom: 10%;
-  margin-left: 10%; margin-right: 3%;
-  padding: 1.25% 0% 1.25% 3%;
+  margin-left: 10%; margin-right: 0%;
+  padding: 1.25% 0% 1.25% 0%;
   font-size: 1.0em;
   text-align: left;
   border : 3px solid black;
-  border-radius: 5% 65% 2.5% 10%;
+  border-radius: 5% 5% 5% 5%;
   height : 65%;
-  width: 80%;
+  width: 70%;
 `;
+
 // using Inner to stylize the elements in <Form>
 // const InnerLoginList = styled.div`
 //   margin-top: 0%; margin-bottom: 1%;
@@ -34,20 +35,18 @@ const LoginPage = () => {
     return (
             <div>
             <Header></Header>
-            <Container>
-            <Row>
-                <Col sm={4}>sm=true</Col>
-            </Row>
-            </Container>
-            <LoginList>
+
+
             {/* row1 */}
+            <LoginList>
             <Container>
-                <Row><Col sm={4}>
-                    <h3>Please enter login information:</h3>
+
+                <Row><Col sm={4} lg={8}>
+                    <h3>Please enter your login credentials:</h3>
                 </Col></Row>
             <Form>
                 {/* row2 */}
-                <Row><Col sm={4}>
+                <Row><Col sm={4} lg={8}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label><b>Email address</b></Form.Label>
                     <Form.Control type="email" placeholder="Enter email" />
@@ -57,33 +56,26 @@ const LoginPage = () => {
                 </Form.Group>
                 </Col></Row>
                 {/* row3 */}
-                <Row><Col sm={4}>
+                <Row><Col sm={4} lg={8}>
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label><b>Password</b></Form.Label>
                     <Form.Control type="password" placeholder="Password" />
                 </Form.Group>
                 </Col></Row>
-                <Nav fill variant="pills" activeKey="1">
-                <Row sm={2}>
-
-                        <Col sm={"2"} lg={"6"}>
-                        <Nav.Item>
-                            <Button size="sm" variant="link" type="submit">Create Account</Button>{' '}
-                        </Nav.Item>
-                        </Col>
-                        <Col sm={"4"} lg={"6.5"}>
-                        <Nav.Item>
-                            <Button size="sm" variant="link" type="submit">Forgot Password?</Button>{' '}
-                        </Nav.Item>
-                        </Col>
+                <Row>
+                    <Col md={2} lg={2}>
+                        <Button size="sm" variant="link" type="submit">Create Account</Button>{' '}
+                    </Col>
+                    <Col md={3} lg={5}>
+                        <Button size="sm" variant="link" type="submit">Forgot Password?</Button>{' '}
+                    </Col>
                 </Row>
-                    <Row>
-                        <Nav.Item>
-                            <Nav.Link eventKey="3" href="/listPage"></Nav.Link>
-                        </Nav.Item>
 
-                    </Row>
-                </Nav>
+                <Row>
+                    <Nav.Item>
+                        <Nav.Link eventKey="3" href="/listPage"></Nav.Link>
+                    </Nav.Item>
+                </Row>
                 {/*<Form.Group className="mb-3" controlId="formBasicCheckbox">*/}
                 {/*    <Form.Check type="checkbox" label="Check me out" />*/}
                 {/*</Form.Group>*/}

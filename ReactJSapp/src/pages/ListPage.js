@@ -1,15 +1,23 @@
 import React from 'react';
-
+import styled from 'styled-components';
 import {Nav, NavDropdown, Table} from 'react-bootstrap';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+
+const innerListPg = styled.div`
+    margin: 2% 15% 2% 15%;
+    padding: 5% 10% 5% 10%;
+`;
 
 const ListPage = () => {
     return (
         // Listing contents in table format:
         <div>
             <Header></Header>
+            <innerListPg>
+
             <Table responsive>
+
                 <thead>
                 <tr>
                     <th>#</th>
@@ -39,7 +47,7 @@ const ListPage = () => {
                 </tr>
                 </tbody>
             </Table>
-
+            </innerListPg>
             <Footer></Footer>
         </div>
     );

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Menu from './Menu';
 
 const HeaderList = styled.div`
-  padding: 0rem 1rem 2rem 1rem;
+  padding: 1% 1% 1% 1%;
   background-color: forestgreen;
   left: 0;
   width: 100%;

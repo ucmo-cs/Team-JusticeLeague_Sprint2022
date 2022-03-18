@@ -11,33 +11,22 @@ import styled from 'styled-components';
 // because it has overlap
 const Menu = () => {
 
-    const handleSelect = (eventKey) => `${eventKey}`; //alert(`selected ${eventKey}`);
+    //const handleSelect = (eventKey) => `${eventKey}`; //alert(`selected ${eventKey}`);
     // Create small script to handle what each event means.
     return (
-        <Nav componentClass={Link} variant="pills" activeKey="1" onSelect={handleSelect}>
-            <Nav.Item>
-                <Nav.Link eventKey="1" href="/home" to="/home">
-                    Home
-                </Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-                <Nav.Link eventKey="2" href="/login" to="/login">
-                    Login
-                </Nav.Link>
-            </Nav.Item>
-            {/* <Nav.Item>
-                <Nav.Link eventKey="3" disabled>
-                    Page Options
-                </Nav.Link>
-            </Nav.Item> */}
-            <NavDropdown title="Page Options" id="nav-dropdown">
-                <NavDropdown.Item eventKey="4.1">List Pages</NavDropdown.Item>
-                <NavDropdown.Item eventKey="4.2">Create Page</NavDropdown.Item>
-                <NavDropdown.Item eventKey="4.3">Something else here</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item eventKey="4.4">Separated link</NavDropdown.Item>
-            </NavDropdown>
-        </Nav>               
+        <div>
+            <Navbar bg="dark" variant="dark">
+                <Container>
+                    <Navbar.Brand>Commerce Bank</Navbar.Brand>
+                    <Nav.Link href="/Home">Home</Nav.Link>
+                    <Nav.Link href="/login">Login</Nav.Link>
+                    <NavDropdown className="me-auto" title="Page Options" id="nav-dropdown">
+                        <Nav.Link href="/list">List Pages</Nav.Link>
+                        <Nav.Link href="/create">Create Pages</Nav.Link>
+                    </NavDropdown>
+                </Container>
+            </Navbar>
+        </div>
     );
 };
 
