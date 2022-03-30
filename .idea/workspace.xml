@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d7a31592-2cad-4a61-871a-037fa0651db1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReactJSapp/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/ReactJSapp/src/App.js" afterDir="false" />
-    </list>
+    <list default="true" id="d7a31592-2cad-4a61-871a-037fa0651db1" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,6 +53,18 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+      </map>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -70,10 +79,12 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="Xstudio.Plugin.SpringJava" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Github\Team-JusticeLeague_Sprint2022\ReactJSapp\src\test_data-jsons" />
       <recent name="C:\React-Exercise\_git-reposit\Team-JusticeLeague_Sprint2022\ReactJSapp\build\static" />
     </key>
   </component>
@@ -116,6 +127,8 @@
       <workItem from="1647366282254" duration="9614000" />
       <workItem from="1647439714143" duration="401000" />
       <workItem from="1647453780138" duration="2768000" />
+      <workItem from="1648661426806" duration="27000" />
+      <workItem from="1648665920251" duration="2649000" />
     </task>
     <servers />
   </component>
@@ -138,7 +151,6 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/ReactJSapp/src/components/Footer.js</url>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
