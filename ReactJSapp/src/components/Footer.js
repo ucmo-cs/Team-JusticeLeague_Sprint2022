@@ -3,11 +3,9 @@ import styled from 'styled-components';
 
 
 const FooterList = styled.div`
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
   padding: 1rem;
   background-color: forestgreen;
-  position: fixed;
-  bottom: 0;
   left: 0;
   width: 100%;
 `;
