@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
-import {Nav, NavDropdown, Table} from 'react-bootstrap';
+import {Container, Nav, NavDropdown, Table} from 'react-bootstrap';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { Link } from 'react-router-dom';
+import data from '../table-data.json';
 
 const innerListPg = styled.div`
     margin: 2% 15% 2% 15%;
@@ -10,43 +12,40 @@ const innerListPg = styled.div`
 `;
 
 const ListPage = () => {
+
+    const [contacts, setContacts] = useState(data);
+
     return (
         // Listing contents in table format:
         <div>
             <Header></Header>
             <innerListPg>
-
-            <Table responsive>
-
-                <thead>
+            <Container>
+            <Table striped bordered hover size="sm">
+            <thead>
                 <tr>
-                    <th>#</th>
-                    {Array.from({ length: 12 }).map((_, index) => (
-                        <th key={index}>Project Name</th>
-                    ))}
+                    <th>Project</th>
+                    <th>Requester</th>
+                    <th>License</th>
+                    <th>State</th>
+                    <th>Date Requested</th>
+                    <th>Date Approved</th>
                 </tr>
-                </thead>
-                <tbody>
+            </thead>
+            <tbody>
+                {contacts.map((contact)=> (
                 <tr>
-                    <td>1</td>
-                    {Array.from({ length: 12 }).map((_, index) => (
-                        <td key={index}>Table cell {index}</td>
-                    ))}
+                    <td>{contact.project}</td>
+                    <td>{contact.requester}</td>
+                    <td>{contact.license}</td>
+                    <td>{contact.state}</td>
+                    <td>{contact.dateRequested}</td>
+                    <td>{contact.dateApproved}</td>
                 </tr>
-                <tr>
-                    <td>2</td>
-                    {Array.from({ length: 12 }).map((_, index) => (
-                        <td key={index}>Table cell {index}</td>
-                    ))}
-                </tr>
-                <tr>
-                    <td>3</td>
-                    {Array.from({ length: 12 }).map((_, index) => (
-                        <td key={index}>Table cell {index}</td>
-                    ))}
-                </tr>
-                </tbody>
+                ))}
+            </tbody>
             </Table>
+            </Container>
             </innerListPg>
             <Footer></Footer>
         </div>
