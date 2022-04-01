@@ -7,6 +7,10 @@
     <list default="true" id="d7a31592-2cad-4a61-871a-037fa0651db1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ReactJSapp/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/ReactJSapp/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReactJSapp/src/components/Menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/ReactJSapp/src/components/Menu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReactJSapp/src/pages/CreatePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/ReactJSapp/src/pages/CreatePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReactJSapp/src/pages/LoginPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/ReactJSapp/src/pages/LoginPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReactJSapp/src/pages/MainPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/ReactJSapp/src/pages/MainPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,6 +132,10 @@
       <workItem from="1647366282254" duration="9614000" />
       <workItem from="1647439714143" duration="401000" />
       <workItem from="1647453780138" duration="2768000" />
+      <workItem from="1648744416201" duration="6772000" />
+      <workItem from="1648766076980" duration="735000" />
+      <workItem from="1648778775893" duration="6000" />
+      <workItem from="1648779051369" duration="11777000" />
     </task>
     <servers />
   </component>
