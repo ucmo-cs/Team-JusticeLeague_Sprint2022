@@ -18,7 +18,7 @@ const Menu = () => {
             <Navbar bg="dark" variant="dark">
                 <Container>
                     <Navbar.Brand>Commerce Bank</Navbar.Brand>
-                    <Nav.Link href="/Home">Home</Nav.Link>
+                    <Nav.Link href="/">Home</Nav.Link>
                     <Nav.Link href="/login">Login</Nav.Link>
                     <NavDropdown className="me-auto" title="Page Options" id="nav-dropdown">
                         <Nav.Link href="/list">List Pages</Nav.Link>

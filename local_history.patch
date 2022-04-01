@@ -1,0 +1,17 @@
+Index: ReactJSapp/src/pages/MainPage.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/ReactJSapp/src/pages/MainPage.js b/ReactJSapp/src/pages/MainPage.js
+--- a/ReactJSapp/src/pages/MainPage.js	
++++ b/ReactJSapp/src/pages/MainPage.js	(date 1648790232717)
+@@ -49,7 +49,7 @@
+                         <hr class="my-2"></hr>
+                         <h1 className="display-2">Welcome back!<br /></h1>
+                     </Row>
+-                    <Row style={{width:"100%"}}>
++                    <Row style={{width:"60%"}}>
+                         <hr class="my-4"></hr>
+                         <p className="lead">Proceed to Employee Login:</p>
+                     </Row>

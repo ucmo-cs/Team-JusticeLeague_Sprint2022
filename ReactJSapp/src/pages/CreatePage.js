@@ -6,9 +6,7 @@ import SaveForm from '../components/SaveForm';
 const CreatePage = () => {
     return (
         <div>
-
             <SaveForm></SaveForm>
-
         </div>
     );
 };
