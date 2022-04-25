@@ -3,9 +3,10 @@ import styled from 'styled-components';
 
 
 const FooterList = styled.div`
-  margin-bottom: 0rem;
   padding: 1rem;
   background-color: forestgreen;
+  position: fixed;
+  bottom: 0;
   left: 0;
   width: 100%;
 `;
@@ -13,8 +14,8 @@ const FooterList = styled.div`
 const Footer = () => {
     return (
         <FooterList>
-            <b>Footer</b>
-            <p>This is some content in the footer</p>
+            <b>CommerceBank</b>
+            <p>Copyright © 2022 Commerce Bancshares, Inc. All rights reserved. Commerce Bank, Member FDIC.</p>
         </FooterList>
     );
 };
