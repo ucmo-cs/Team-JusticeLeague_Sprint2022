@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+@CrossOrigin
 @RequiredArgsConstructor
 @RestController
 public class ProjectController {
@@ -23,19 +24,23 @@ private final ProjectService projectService;
     // return HTTP status code
     //Test Driven Development
 
-
+    @CrossOrigin
     @PostMapping("/project")
     public ResponseEntity<?> save(@RequestBody Project project){
-        return new ResponseEntity<>(projectService.create(project), HttpStatus.OK);
+        System.out.println("***x`"+ project.getProjectName());
+        System.out.println("***x`"+ project.getUser());
+        return new ResponseEntity<>(projectService.create(project), HttpStatus.CREATED);
+
+
     }
 
-
+    @CrossOrigin
     @GetMapping("/projects")
     public ResponseEntity<?> findAll(){
         return new ResponseEntity<>(projectService.findAll(), HttpStatus.OK);
     }
 
-
+    @CrossOrigin
     @GetMapping("/project/{id}")
     public ResponseEntity<?> find(@PathVariable Long id){
         return new ResponseEntity<>(projectService.findProject(id), HttpStatus.OK);

@@ -25,6 +25,8 @@ public class Project {
     private String state;
     private String dateRequested;
     private String dateApproved;
+    private String desc;
+    private String url;
 
 
 

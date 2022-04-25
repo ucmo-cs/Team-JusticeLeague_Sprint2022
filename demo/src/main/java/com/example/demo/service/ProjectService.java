@@ -17,11 +17,13 @@ public class ProjectService {
 
     @Transactional
     public Project create(Project project){
+
         return projectRepository.save(project);
     }
 
     @Transactional(readOnly = true)
     public List<Project> findAll(){
+
         return projectRepository.findAll();
     }
 
