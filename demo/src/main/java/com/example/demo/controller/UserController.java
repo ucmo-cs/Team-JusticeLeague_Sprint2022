@@ -25,11 +25,14 @@ public class UserController {
     @Autowired
     private SecurityService securityService;
 
+    @CrossOrigin
     @PostMapping("/user")
     public ResponseEntity<?> save(@RequestBody User user){
 
-        System.out.println("anyting");
-        return new ResponseEntity<>(userService.create(user), HttpStatus.OK);
+        System.out.println("New email" + user.getEmail());
+        System.out.println("New password" + user.getPassword());
+       // return new ResponseEntity<>(userService.create(user), HttpStatus.OK);
+        return new ResponseEntity<>(userService.create(user), HttpStatus.CREATED);
     }
 
 
@@ -64,6 +67,14 @@ public class UserController {
         }
         return ResponseEntity.status(400).body(null);
 
+    }
+
+    @CrossOrigin
+    @GetMapping("/user/adminChecking/{id}")
+    public boolean AdminChecking(@PathVariable String id){
+        boolean flg = userService.AdChecking(id);
+        System.out.println("flag "+flg);
+        return flg;
     }
 
 }

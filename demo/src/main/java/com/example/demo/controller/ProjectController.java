@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import com.example.demo.domain.Project;
 import com.example.demo.service.ProjectService;
+import com.example.demo.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -30,9 +31,32 @@ private final ProjectService projectService;
         System.out.println("***x`"+ project.getProjectName());
         System.out.println("***x`"+ project.getUser());
         return new ResponseEntity<>(projectService.create(project), HttpStatus.CREATED);
-
-
     }
+
+    @PutMapping("/project/{id}")
+    public void saveStatus(@PathVariable Long id, @RequestBody Project project){
+
+        System.out.println("status " );
+        System.out.println("***x`"+ id);
+        projectService.approveEmployeeId(id,project);    }
+
+//    public void updateEmployeeId(@PathVariable("id") Long id,@RequestBody Employee employee){
+//        employeeService.updateEmployeeId(id,employee);
+//    }
+
+    @PutMapping("/project/disapprove/{id}")
+    public void disapproveStatus(@PathVariable Long id, @RequestBody Project project){
+
+        System.out.println("status " );
+        System.out.println("***x`"+ id);
+        projectService.disapproveEmployeeId(id,project);    }
+
+//    public void updateEmployeeId(@PathVariable("id") Long id,@RequestBody Employee employee){
+//        employeeService.updateEmployeeId(id,employee);
+//    }
+
+
+
 
     @CrossOrigin
     @GetMapping("/projects")
@@ -45,6 +69,7 @@ private final ProjectService projectService;
     public ResponseEntity<?> find(@PathVariable Long id){
         return new ResponseEntity<>(projectService.findProject(id), HttpStatus.OK);
     }
+
 
 
 }

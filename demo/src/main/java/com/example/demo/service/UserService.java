@@ -47,4 +47,12 @@ public class UserService  {
         return login.getPassword().equals(user.get().getPassword());
     }
 
+    public boolean AdChecking(String id) {
+        Optional<User> user = userRepository.findById(id);
+        User user1 = user.get();
+        System.out.println(user1.getAdminAccess()+ "admin access" );
+        if(user1.getAdminAccess().equals("Yes")) return true;
+        return false;
+    }
+
 }
