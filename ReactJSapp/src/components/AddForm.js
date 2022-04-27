@@ -28,12 +28,6 @@ const AddForm = () => {
         state:"In Process",
         dateRequested: today,
         dateApproved: '~'
-        //projectName:'',
-        //license:'',
-        //desc:'',
-        //url:''
-
-        //projectName:"", user:"tww57440@ucmo.edu", license: "", state:"In ///////Process", dateApproved: "~", url: "", desc: ""
     });
 
         const onInputChange = (e) => {
@@ -66,7 +60,12 @@ const AddForm = () => {
         
           }
         
-
+      function maxLengthCheck (object) {
+            if (object.target.value.length > object.target.maxLength) {
+             object.target.value = object.target.value.slice(0, object.target.maxLength)
+              }
+            }
+            
  
 
     return (
@@ -83,7 +82,9 @@ const AddForm = () => {
                 >
                 </Form.Control>
                 <Form.Control
-                    type="text"
+                    maxLength={5}
+                    type="number"
+                    onInput={maxLengthCheck}
                     placeholder="License #"
                     name="license"
                     onChange={ (e) => onInputChange(e)}

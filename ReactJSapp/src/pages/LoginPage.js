@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import {Button, Form, Container, Row, Col, Nav} from 'react-bootstrap';
+import {Button, Form, Container, Row, Col, Nav, Modal} from 'react-bootstrap';
 import styled from 'styled-components';
 import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
@@ -51,6 +51,43 @@ const LoginList = styled.div`
 
 function LoginPage({setToken}){
 
+    const [user, setNewUser] = useState({
+        email: "",
+        adminAccess: "No",
+        password: " "
+    });
+    
+
+    console.log("create user");
+    console.log(user);
+    const onInputChange2 = (e) => {
+        console.log(e);
+        setNewUser({
+            ...user,[e.target.name]: e.target.value
+        });
+}
+
+const handleCreateUserSubmit = (e) => {
+    e.preventDefault();
+
+    fetch('http://localhost:8080/user', {
+   
+      method: 'POST',
+      headers: { 
+        'Content-Type': 'application/json',
+        'Accept': 'application/json' },
+      body: JSON.stringify(user),
+      credentials : 'same-origin',
+      }).then((res) => {
+        console.log(res)     
+        return res.json(); 
+      }).then((res) =>{
+        console.log(res);
+        window.location.href="/"
+
+      });
+
+  }
 
 const [login, setLogin] = useState({
     email:'',
@@ -90,7 +127,9 @@ const onInputChange = (e) => {
 }
     
 
-
+ const [show, setShow] = useState(false);
+        const handleShow = () => setShow(true);
+        const handleClose = () => setShow(false);
 
 
     return (
@@ -122,10 +161,10 @@ const onInputChange = (e) => {
                 </Col></Row>
                 <Row>
                     <Col md={2} lg={2}>
-                        <Button size="sm" variant="link" type="submit">Create Account</Button>{' '}
+                        <Button size="sm" variant="success" onClick={handleShow}>Create Account</Button>{' '}
                     </Col>
                     <Col md={3} lg={5}>
-                        <Button size="sm" variant="link" type="submit">Forgot Password?</Button>{' '}
+                        <Button size="sm" variant="success">Forgot Password?</Button>{' '}
                     </Col>
                 </Row>
 
@@ -146,6 +185,39 @@ const onInputChange = (e) => {
             </Container>
             </LoginList>
             <Footer></Footer>
+
+
+            <Modal show={show} onHide={handleClose} backdrop="static" size="lg">
+            <Modal.Header style={{backgroundColor: 'forestgreen'}}>
+                    <Modal.Title>
+                        New User
+                    </Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+            <Form onSubmit={handleCreateUserSubmit}>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Label>Email address</Form.Label>
+                    <Form.Control type="email" name="email" onChange={ (e) => onInputChange2(e)} placeholder="Enter email" />
+                    <Form.Text className="text-muted">
+                    We'll never share your email with anyone else.
+                    </Form.Text>
+                </Form.Group>
+
+                <Form.Group className="mb-3" controlId="formBasicPassword">
+                    <Form.Label>Password</Form.Label>
+                    <Form.Control type="password" name="password" onChange={ (e) => onInputChange2(e)} placeholder="Password" />
+                </Form.Group>
+                <Button variant="outline-success" type="submit">
+                    Submit
+                </Button>
+                </Form>
+            </Modal.Body>
+            <Modal.Footer>
+                    <Button variant="success" onClick={handleClose}>
+                        Close
+                    </Button>
+            </Modal.Footer>
+        </Modal>
 
         </div>
     );

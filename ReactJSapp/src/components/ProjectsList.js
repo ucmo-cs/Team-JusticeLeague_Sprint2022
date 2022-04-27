@@ -86,7 +86,7 @@ const ProjectsList = () => {
             </Modal.Footer>
         </Modal>
         
-        <div style={{position: 'fixed', top: '3%', left: '37%'}}>
+        <div style={{paddingBottom: '10px'}}>
                <Button variant="outline-success" onClick={handleShow}>New Request</Button>
             </div>
 

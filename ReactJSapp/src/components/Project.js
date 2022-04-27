@@ -30,43 +30,89 @@ const Project = ({project}) => {
         setShow(false);
     }
 
+    const tokenString = sessionStorage.getItem('token');
+    const userToken = JSON.parse(tokenString);
 
-    /*
-    const [approve, setApprove]  = useState({
+    
+ const [admin, setAdmin] = useState(false);
+ const handleAdmin = () => {
+       
+        fetch("http://localhost:8080/user/adminChecking/"+userToken.user, {method:"GET"})
+        .then(res =>res.json())
+        .then(res=>{
+            setAdmin(res);})
+    // fetch("http://localhost:8080/user/adminChecking/"+userToken.user, {method:"GET"})
+    // .then(res =>res.json())
+    //     .then(res=>{
+    //         setProjects(res);})
+    // },[]);
+        
 
-        state:"Approved",
-        dateApproved: today
+ } 
 
-    });
+
+ const [disapprove, setDisapprove]  = useState();
+
+ const handleDisapprove = (e) => {
+         console.log(e);
+         setDisapprove({
+             ...disapprove,[e.target.name]: e.target.value
+
+         });
+
+     e.preventDefault();
+     console.log(project.user);
+     fetch('http://localhost:8080/project/disapprove/'+ project.id, {
+    
+       method: 'PUT',
+       headers: { 
+         'Content-Type': 'application/json',
+         'Accept': 'application/json' },
+       body: JSON.stringify(project),
+       credentials : 'same-origin',
+       }).then((res) => {
+         console.log(res)     
+         return res.json(); 
+       }).then((res) =>{
+         console.log(res);
+         window.location.href="/list"
+
+       });
+
+ }
+    
+    const [approve, setApprove]  = useState();
 
     const handleApprove = (e) => {
-        
-        setApprove({
-            
+            console.log(e);
+            setApprove({
+                ...approve,[e.target.name]: e.target.value
 
-        })
+            });
 
         e.preventDefault();
- 
-        fetch('http://localhost:8080/project', {
+        console.log(project.user);
+        fetch('http://localhost:8080/project/'+ project.id, {
        
-          method: 'POST',
+          method: 'PUT',
           headers: { 
             'Content-Type': 'application/json',
             'Accept': 'application/json' },
-          body: JSON.stringify(),
+          body: JSON.stringify(project),
           credentials : 'same-origin',
           }).then((res) => {
+            console.log("approved!!!");
+            window.location.href="/list"
             console.log(res)     
             return res.json(); 
           }).then((res) =>{
-            console.log(res);
+            console.log("approved!!!");
             window.location.href="/list"
-   
+
           });
 
     }
-    */
+    
     /*
     useEffect(() => {
         handleClose()
@@ -87,7 +133,7 @@ const Project = ({project}) => {
            <Button variant="outline-success" onClick={handleShow}>Info</Button>
         </td>
 
-        <Modal show={show} onHide={handleClose}  backdrop="static" size= 'lg' >
+        <Modal show={show} onHide={handleClose} onEnter={handleAdmin}  backdrop="static" size= 'lg' >
             <Modal.Header style={{backgroundColor: ' forestgreen'}}>
                     <Modal.Title>
                         {project.projectName}
@@ -100,8 +146,9 @@ const Project = ({project}) => {
                 <p>{project.license}</p></ol>
                 <ol><h3>Url:</h3> <p>{project.url}</p></ol>
                 <ol><h3>Descritption:</h3><textarea rows='4' readOnly style={{resize: 'none', width: '90%'}}>{project.desc}</textarea></ol>
-                <ol style={{paddingTop: '5%'}}><Button variant="outline-success" style={{marginRight: '5%'}} >Approve</Button>
-                <Button variant="outline-success" value={today}>Disapprove</Button></ol>
+                <ol style={{paddingTop: '5%'}}><Button disabled={!admin}variant="outline-success" style={{marginRight: '5%'}} onClick={ (e) => handleApprove(e)}>Approve</Button>
+                <Button variant="outline-success" disabled={!admin}
+                    value={today} onClick={ (e) => handleDisapprove(e)}>Disapprove</Button></ol>
             </ul>
 
             </Modal.Body>
