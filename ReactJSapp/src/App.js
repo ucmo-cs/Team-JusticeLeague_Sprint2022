@@ -2,25 +2,50 @@ import './App.css';
 import React, {Component} from 'react';
 import {Route, Routes} from 'react-router-dom';
 // Following imports are our pages
-import MainPage from './pages/MainPage'; // change to "Home"?
 import LoginPage from './pages/LoginPage';
 import ListPage from './pages/ListPage';
-import CreatePage from './pages/CreatePage';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-class App extends Component {
-    render() {
+
+function setToken(userToken) {
+    console.log("tokenTEst")
+    console.log(userToken)
+    sessionStorage.setItem('token', JSON.stringify(userToken));
+  }
+  
+  function getToken() {
+    const tokenString = sessionStorage.getItem('token');
+    const userToken = JSON.parse(tokenString);
+    return userToken?.token
+  }
+
+ 
+
+function App(){
+ 
+    const token = getToken();
+
+    if(!token){
+
         return (
             <div className="App">
                 <Routes>
-                    <Route path="/" exact={true} element={<MainPage/>}/>
-                    <Route path="/login" exact={true} element={<LoginPage/>}/>
-                    <Route path="/create" exact={true} element={<CreatePage/>}/>
-                    <Route path="/list" exact={true} element={<ListPage/>}/>
+                    <Route path="/" exact={true} element={<LoginPage setToken={setToken}/>}/>
                 </Routes>
             </div>
         );
-    };
+
+
+    }
+    
+    return (
+        <div className="App">
+            <Routes>
+                <Route path="/" exact={true} element={<LoginPage setToken={setToken}/>}/> 
+                <Route path="/list" exact={true} element={<ListPage/>}/>
+            </Routes>
+        </div>
+    );
+ 
 }
 export default App;
-
-

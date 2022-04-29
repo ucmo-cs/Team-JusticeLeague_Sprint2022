@@ -1,6 +1,9 @@
 server:
   port: 8080
 
+spring:
+  application:
+    name: book-service
 
   h2:
     console:
@@ -11,6 +14,10 @@ server:
 
   datasource:
     driver-class-name: org.h2.Driver
-    url: jdbc:h2:mem:testdb
+    url: jdbc:h2:file:~/testdb
     username: sa
     password:
+
+  jpa:
+    hibernate:
+     ddl-auto: update
